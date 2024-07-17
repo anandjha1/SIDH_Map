@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f5;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  color: #333;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: fill;
+}
+
+.profile-name {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.profile-name h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #4caf50;
+}
+
+.profile-name p {
+  margin: 4px 0 0;
+  color: #777;
+}
+
+.profile-details {
+  padding: 10px 0;
+}
+
+.profile-info {
+  margin-bottom: 20px;
+}
+
+.profile-info h3 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+  color: #4caf50;
+}
+
+.profile-details table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.profile-details th,
+.profile-details td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.75rem;
+}
+
+.profile-details th {
+  background-color: #f9f9f9;
+  color: #333;
+  border-radius: 5px;
+}
+
+.profile-details input[type="number"],
+.profile-details input[type="password"],
+.profile-details textarea {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin: 4px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.no-data {
+  text-align: center;
+  padding: 50px;
+  color: #777;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: #09f;
+  animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

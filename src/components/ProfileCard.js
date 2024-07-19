@@ -7,7 +7,7 @@ const ProfileCard = ({ data, setData, link, setLink, baseUrl }) => {
   const searchParam = new URLSearchParams(window.location.search);
   const [stdId, setStdId] = useState(searchParam.get("stdId") || "");
   const [pin, setPin] = useState("");
-  const [remarks, setRemarks] = useState("Okay Done");
+  const [remarks, setRemarks] = useState("EKYC ");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 

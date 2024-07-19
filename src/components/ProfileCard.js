@@ -4,9 +4,8 @@ import Loader from "./Loader";
 import "./ProfileCard.css";
 
 const ProfileCard = ({ data, setData, link, setLink, baseUrl }) => {
-  const [stdId, setStdId] = useState(
-    new URLSearchParams(window.location.search).get("stdId") || ""
-  );
+  const searchParam = new URLSearchParams(window.location.search);
+  const [stdId, setStdId] = useState(searchParam.get("stdId") || "");
   const [pin, setPin] = useState("");
   const [remarks, setRemarks] = useState("Okay Done");
   const [loading, setLoading] = useState(false);
@@ -26,7 +25,7 @@ const ProfileCard = ({ data, setData, link, setLink, baseUrl }) => {
     IsAadhaarVerified,
     AddressDetails,
   } = data.Data;
-  const [name, setName] = useState(FullName || "");
+  const [name, setName] = useState(FullName || searchParam.get("name") || "");
   const address = IsAadhaarVerified ? AddressDetails[0] : {};
 
   const handleSubmit = async () => {
